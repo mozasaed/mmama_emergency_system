@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mmama/components/MyButton.dart';
+import 'package:mmama/Landing.dart';
 import 'package:mmama/components/MyTextFields.dart';
 
 class Home extends StatelessWidget {
@@ -7,7 +7,6 @@ class Home extends StatelessWidget {
 
   final unameController = TextEditingController();
   final psdController = TextEditingController();
-   void signIn(){}
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class Home extends StatelessWidget {
 
           //welcome back
           const Text(
-            'Street Close Emergency App',
+            'Street Emergency App',
             style: TextStyle(color: Colors.blueAccent, fontSize: 20, fontWeight: FontWeight.w400),
           ),
 
@@ -62,9 +61,27 @@ class Home extends StatelessWidget {
           ),
             const SizedBox(height: 20,),
           //login btn
-        MyButton(
-            onTap: signIn
-        ),
+          GestureDetector(
+            onTap: (){ Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Landing()));},
+            child: Container(
+              padding: const EdgeInsets.all(25),
+              margin: const EdgeInsets.symmetric(horizontal: 25),
+              decoration: BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.circular(8)
+              ),
+              child: const Center(
+                child: Text(
+                  'Sign In',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17
+                  ),),
+              ),
+            ),
+
+          ),
             const SizedBox(height: 30,),
           Row(
             children: const [

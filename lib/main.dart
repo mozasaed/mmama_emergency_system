@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Mama Mtoto App',
+      title: 'Nymbani Emergency App',
       home: splash(),
 
     );
