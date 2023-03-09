@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'DocDashboard.dart';
 import 'ProfileScreen.dart';
+import 'Setting.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     const DocDashboard(),
     const DocDashboard(),
     const ProfileScreen(),
-    const DocDashboard(),
+    const Settings(),
     // const Subscription(),
     // const TafutaMagazeti(),
     // const Settings(),
@@ -38,8 +39,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
-      ),
       body: PageView(
         controller: _pageController,
         children: pages,
